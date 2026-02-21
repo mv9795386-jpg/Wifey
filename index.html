@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wifey ♡ Sohna</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="bg-hearts" aria-hidden="true"></div>
+
+  <audio id="bgm" loop>
+    <source src="assets/love.mp3" type="audio/mpeg">
+  </audio>
+
+  <header class="topbar">
+    <div class="brand">Wifey ♡ Sohna</div>
+    <div class="actions">
+      <button id="musicBtn" class="btn ghost" title="Music">♫</button>
+      <button id="surpriseBtn" class="btn">Open Surprise ✨</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card glow">
+      <div class="hero-left">
+        <h1 class="script">Wifey…</h1>
+        <h2 class="headline">You are my <span class="pink">favorite</span> feeling, <span class="pink2">Sohna</span>.</h2>
+        <p class="sub" id="subText"></p>
+
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-num" id="loveCounter">0</div>
+            <div class="stat-label">Reasons I Love You</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" id="daysCounter">0</div>
+            <div class="stat-label" id="daysLabel">Days Until We Meet</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">Forever</div>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <button class="btn big" id="openDM">Open Our DM 💌</button>
+          <button class="btn ghost big" id="openGallery">Photos 📸</button>
+          <button class="btn ghost big" id="openPromises">My Promises 🫶</button>
+        </div>
+
+        <p class="tiny">Tap “Open Surprise” for the full magic ✨</p>
+      </div>
+
+      <div class="hero-right">
+        <div class="polaroid tilt">
+          <img src="assets/riya1.jpg" alt="Wifey photo"/>
+          <div class="polaroid-cap">To my future wife 💍</div>
+        </div>
+
+        <div class="mini-polaroids">
+          <img class="mini" src="assets/us1.jpg" alt="Photo 1"/>
+          <img class="mini" src="assets/us2.jpg" alt="Photo 2"/>
+          <img class="mini" src="assets/riya2.jpg" alt="Photo 3"/>
+        </div>
+      </div>
+    </section>
+
+    <section class="card section" id="letter">
+      <h3 class="section-title">Love Letter (Only for Wifey)</h3>
+      <p class="letter" id="letterText"></p>
+      <div class="signature">— Yours, <span id="yourName"></span></div>
+    </section>
+
+    <section class="card section">
+      <h3 class="section-title">Our Story (Online → December → Forever)</h3>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <h4>Reel se Real</h4>
+            <p>Reels se shuru hua… par feelings bilkul real hain. Tumhari vibe ne mujhe calm kar diya.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <h4>December Meeting</h4>
+            <p>December me jab milenge… main pehle hug me hi tumhe feel kara dunga: “You are home.” 🫂</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <h4>Forever Promise</h4>
+            <p>Main tumhe har din choose karunga — online bhi, real life bhi. Wifey forever. 💍</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card section" id="promises">
+      <h3 class="section-title">Mukul’s Promises to Wifey 🫶</h3>
+      <ul class="promise-list" id="promiseList"></ul>
+      <div class="center">
+        <button class="btn" id="promiseBoom">Seal These Promises 💖</button>
+      </div>
+    </section>
+
+    <section class="card section" id="gallerySection">
+      <h3 class="section-title">Photos (Tap to Zoom)</h3>
+      <div class="gallery" id="gallery">
+        <img src="assets/riya1.jpg" alt="photo"/>
+        <img src="assets/riya2.jpg" alt="photo"/>
+        <img src="assets/us1.jpg" alt="photo"/>
+        <img src="assets/us2.jpg" alt="photo"/>
+        <img src="assets/us3.jpg" alt="photo"/>
+      </div>
+      <p class="tiny center">Wifey, you look unreal. ✨</p>
+    </section>
+
+    <section class="final card glow" id="final">
+      <h3 class="script big-script">Wifey…</h3>
+      <p class="final-text">Will you be my <b>forever</b>?</p>
+      <div class="final-actions">
+        <button class="btn big" id="yesBtn">Yes 💖</button>
+        <button class="btn ghost big" id="noBtn">No 🙈</button>
+      </div>
+      <p class="tiny center" id="finalMsg"></p>
+    </section>
+
+    <footer class="footer">
+      Made with ♡ by Mukul — <span id="dateStamp"></span>
+    </footer>
+  </main>
+
+  <!-- DM MODAL -->
+  <div class="modal" id="dmModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-top">
+        <div class="dm-title">DM (No.1 Wifey Edition) 💌</div>
+        <button class="x" id="closeDM" aria-label="Close">✕</button>
+      </div>
+
+      <div class="dm-chat" id="dmChat"></div>
+
+      <div class="dm-bottom">
+        <div class="typing" id="typing">typing…</div>
+        <button class="btn" id="nextMsg">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <img id="lightboxImg" alt="zoom"/>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
